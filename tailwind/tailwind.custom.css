@@ -1,0 +1,347 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+@tailwind screens;
+
+@layer utilities {
+
+  /* Text */
+  .text-primary {
+    @apply text-green;
+  }
+  .text-muted {
+    @apply text-gray-50;
+  }
+  .text-gray {
+    @apply text-gray-60;
+  }
+  .text-dark-gray {
+    @apply text-gray-70;
+  }
+  .text-dark {
+    @apply text-gray-80;
+  }
+  .text-darker {
+    @apply text-gray-90;
+  }
+  .text-info {
+    @apply text-blue;
+  }
+  .text-error {
+    @apply text-red;
+  }
+
+  /* Backgrounds */
+  .bg-xlight {
+    @apply bg-gray-10;
+  }
+  .bg-light {
+    @apply bg-gray-20;
+  }
+  .bg-secondary {
+    @apply bg-gray-30;
+  }
+  .bg-gray {
+    @apply bg-gray-60;
+  }
+  .bg-dark {
+    @apply bg-gray-80;
+  }
+  .bg-darker {
+    @apply bg-gray-90;
+  }
+
+  /* Borders */
+  .border-secondary {
+    @apply border-gray-30;
+  }
+
+}
+
+@layer components {
+
+  /* Paragraphs */
+  p {
+    @apply text-gray;
+  }
+  p a {
+    @apply text-primary;
+  }
+
+  /* Links */
+  a:hover {
+    @apply opacity-70;
+  }
+
+  /* Highlights */
+  mark {
+    background-color: #fcf8e3;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-block text-center;
+  }
+  .btn:hover:not([disabled]) {
+    @apply opacity-95 cursor-pointer;
+  }
+  .btn:disabled {
+    @apply opacity-60 cursor-not-allowed;
+  }
+  .btn-sm {
+    @apply py-1.5 px-3.5 leading-normal text-xs rounded-sm;
+  }
+  .btn-md {
+    @apply py-2.5 px-6 text-sm rounded-sm;
+  }
+  .btn-lg {
+    @apply py-4 px-9 text-base rounded-sm;
+  }
+  .btn-primary {
+    @apply bg-green text-white;
+  }
+  .btn-red {
+    @apply bg-red text-white;
+  }
+  .btn-purple {
+    @apply bg-purple text-white;
+  }
+  .btn-secondary {
+    @apply bg-gray-30;
+  }
+  .btn-gray {
+    @apply bg-gray-60 text-white;
+  }
+  .btn-light {
+    @apply bg-gray-20;
+  }
+  .btn-white {
+    @apply bg-white;
+  }
+
+  /* Forms */
+  .label {
+    @apply tracking-wider uppercase text-xs text-gray-50 block mb-2;
+  }
+  .form-element {
+    @apply inline-block border-gray-30 focus:border-green focus:border-opacity-50 focus:ring focus:ring-gray-10 focus:ring-opacity-50;
+  }
+  .input-group {
+    @apply inline-block flex items-stretch border border-gray-30;
+  }
+  .input-group-prepend {
+    @apply flex items-center border-r border-secondary bg-light;
+  }
+  .input-group-element {
+    @apply flex-grow border-0 focus:border-green focus:border-opacity-50 focus:ring focus:ring-gray-10 focus:ring-opacity-50;
+  }
+  .form-text-top {
+    @apply text-xs -mt-1 mb-2;
+  }
+  .form-text-bottom {
+    @apply text-xs mt-3;
+  }
+  .form-link-back {
+    @apply text-xs mt-5;
+  }
+  .form-link-back {
+    @apply text-gray inline-block;
+  }
+  .form-full .form-element, .form-full .btn {
+    @apply w-full;
+  }
+  .form-full .btn {
+    @apply mb-2;
+  }
+  .form-sm .form-group {
+    @apply mb-4;
+  }
+  .form-sm .form-element {
+    @apply py-1.5 px-2 text-xs rounded-sm;
+  }
+  .form-sm .input-group {
+    @apply rounded-sm;
+  }
+  .form-sm .input-group-prepend {
+    @apply px-2 text-xs;
+  }
+  .form-sm .input-group-element {
+    @apply text-xs;
+  }
+  .form-sm .btn {
+    @apply btn-sm;
+  }
+  .form-md .form-group {
+    @apply mb-5;
+  }
+  .form-md .form-element {
+    @apply text-sm rounded-sm;
+  }
+  .form-md .input-group {
+    @apply rounded-sm;
+  }
+  .form-md .input-group-prepend {
+    @apply px-4 text-sm;
+  }
+  .form-md .input-group-element {
+    @apply text-sm;
+  }
+  .form-md .btn {
+    @apply btn-md;
+  }
+  .form-lg .form-group {
+    @apply mb-7;
+  }
+  .form-lg .form-element {
+    @apply py-4 px-7 rounded-sm;
+  }
+  .form-lg .input-group {
+    @apply rounded-sm;
+  }
+  .form-lg .input-group-prepend {
+    @apply px-7 text-base;
+  }
+  .form-lg .input-group-element {
+    @apply text-base py-4 px-7;
+  }
+  .form-lg .btn {
+    @apply btn-lg;
+  }
+  .form-nosubmit .form-group:last-of-type{
+    @apply mb-0;
+  }
+
+  /* Alerts */
+  .alert {
+    @apply text-xs rounded-sm leading-relaxed p-3;
+  }
+  .alert-info {
+    @apply bg-cyan-light text-cyan-dark;
+  }
+  .alert-warning {
+    @apply bg-yellow-light text-yellow-dark;
+  }
+
+  /* Modals */
+  .modal .modal-content {
+    max-height: 85vh;
+  }
+  .modal .modal-close {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: linear-gradient(45deg, transparent 50%, #E5E5E5 50%);
+    background-position: 100% 0;
+    background-size: 2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    z-index: 1000 !important;
+  }
+  .modal .modal-close:hover {
+    background-image: linear-gradient(45deg, transparent 50%, #d2d2d2 50%);
+  }
+  .modal .modal-close span {
+    margin-left: 1.4rem;
+    margin-top: -0.35rem;
+  }
+  .modal .modal-title {
+    @apply text-2xl font-light mb-1;
+  }
+  .modal .modal-subtitle {
+    @apply text-muted text-xs;
+  }
+
+  /* Tabbed Content */
+  .tabs .tab-active {
+    border-top: 2px solid #5b5b5b !important;
+  }
+
+  /* Toggle */
+  .switch {
+    font-size: 9px;
+  }
+  .switch.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  /* Typeahead */
+  .typeahead .typeahead-results {
+    max-height: 6rem;
+  }
+
+  /* Dropdowns */
+  .dropdown-menu .dropdown-item {
+    white-space: nowrap;
+  }
+  .dropdown-menu .dropdown-item:not(:disabled):not(.disabled) {
+    color: #555 !important;
+  }
+  .dropdown-menu .dropdown-item:hover:not(:disabled):not(.disabled) {
+    color: #151515 !important;
+  }
+  .dropdown-menu .dropdown-item.disabled, .dropdown-item:disabled {
+    color: #999;
+    pointer-events: auto;
+    cursor: not-allowed;
+  }
+  .dropdown-menu .dropdown-menu-xs {
+    border-radius: 0.125rem;
+  }
+  .dropdown-menu .dropdown-menu-xs .dropdown-item {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+  }
+  .dropdown-menu .dropdown-menu-xs .dropdown-item:first-child {
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+  }
+  .dropdown-menu .dropdown-menu-xs .dropdown-item:last-child {
+    border-bottom-left-radius: 0.125rem;
+    border-bottom-right-radius: 0.125rem;
+  }
+
+  /* Data Tables */
+  .datatable th, .datatable td {
+    padding: 0.3125rem;
+    white-space: nowrap;
+  }
+  .datatable th {
+    font-weight: 500;
+  }
+
+  /* Plots */
+  .plotly-notifier .notifier-note {
+    background-color: #555555 !important;
+  }
+  .plotly-notifier p span {
+    color: #ffffff !important;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .fade-in {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+  .blink {
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
+  }
+
+}

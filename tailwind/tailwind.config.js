@@ -1,0 +1,43 @@
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  important: true,
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      red: '#D0021B',
+      green: '#54B59F',
+      cyan: '#78CADB',
+      'cyan-light': '#A3DBE7',
+      'cyan-dark': '#2B494F',
+      yellow: '#E9C464',
+      'yellow-light': '#F0D796',
+      'yellow-dark': '#544723',
+      orange: '#F37B3C',
+      pink: '#EB5581',
+      purple: '#330879',
+      blue: '#005BAE',
+      'gray-10': '#FBFBFB',
+      'gray-20': '#F5F5F5',
+      'gray-30': '#E5E5E5',
+      'gray-40': '#CCCCCC',
+      'gray-50': '#999999',
+      'gray-55': '#666666',
+      'gray-60': '#555555',
+      'gray-70': '#444444',
+      'gray-80': '#333333',
+      'gray-90': '#151515',
+      black: '#000000',
+      white: '#FFFFFF',
+    },
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
+}
